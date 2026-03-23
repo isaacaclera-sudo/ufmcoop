@@ -1,0 +1,459 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial";
+    background-color: #f8f6f4;
+    overflow-x: hidden;
+}
+
+@font-face{
+    font-family: "Canva Sans";
+    src:url("fonts/Canva-Sans/Desktop/CanvaSans-Regular.otf")format("opentype")   
+}
+@font-face{
+    font-family: "Canva Sans Bold";
+    src:url("fonts/Canva-Sans/Desktop/CanvaSans-Bold.otf")format("opentype")   
+}
+
+.head{
+    gap: 25px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.head h1{
+    font-size: 45px;
+    font-weight: normal;
+    font-family: "Canva Sans Bold";
+}
+
+.line{
+    background-color: #0d55e4;
+    height: 55px;
+    width: 3px;
+}
+
+/*NAVIGATION NAVIGATION NAVIGATION NAVIGATION*/
+/*blue=#0d55e4 red=#cd1112 lighter red=#cd1112*/
+header{
+    min-height: 100px;
+}
+nav{
+    min-width: 100%;
+    top:0;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    padding:10px;
+    z-index: 10000;
+
+}
+
+.brand img{
+    max-height: auto;
+    max-width: 190px;
+}
+
+nav ul{ 
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: 50px;
+    overflow:hidden;
+
+}
+
+nav a{
+    color: black;
+    font-size: 14px;
+    font-family: "Canva Sans Bold";
+    text-decoration: none;
+    padding:4px;
+    margin:4px;
+    white-space: nowrap;
+    
+}
+
+li a.register{
+    color: white;
+    padding-left: 20px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 20px;
+    margin-left: 20px;
+    background-color: #980f10;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #980f10;
+}
+
+li a.log-in{
+    padding-left: 27px;
+    padding-right: 27px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-style: solid;
+    border-width:1px;
+    border-color: black;
+}
+
+/*HERO HERO HERO HERO*/
+.hero{
+    color: white;
+}
+
+.hero .text{
+    padding: 70px;
+    padding-top: 80px;
+    margin-right: 144px;
+    margin-bottom: 40px;
+}
+.hero .bg{
+    max-height: 10%;
+    max-width: auto;
+}
+.hero .rectangle{
+    top: 0;
+    position: absolute;
+    background-color: #0b2e74;
+    height: 1111px;
+    width: 100%;
+    z-index: -99;
+    opacity: 0.5;
+}
+
+.hero .backdrop img{
+    margin: 0;
+    padding: 0;
+    top:0;
+    height:1100px;
+    filter: contrast(80%),saturate(200%);
+    filter: brightness(40%);
+    position: absolute;
+    opacity: 100;
+    z-index: -100;
+}
+
+.hero h6{
+    font-size: 12px;
+    font-weight: 90;
+    font-family: "Arial";
+    letter-spacing: 3px;
+    margin: 0;
+    padding: 0;
+}
+
+.hero a.underline{
+    font-size: 58px;
+    font-weight: 100;
+    font-family: "Canva Sans Bold";
+    margin: 0;
+    padding: 0;
+      text-decoration: underline solid #cd1112 3.5px;
+}
+
+.hero h1{
+    font-size: 58px;
+    font-weight: 100;
+    font-family: "Canva Sans Bold";
+    line-height: 90%;    
+    margin: 0;
+    padding: 0;
+}
+
+.hero p, a.link{
+    text-align: justify;
+    font-size: 13px;
+    color: #f8f6f4;
+}
+
+.hero button{
+    position: relative;
+    top: 10px;
+    background-color: #0d55e4;
+    font-family: "Canva Sans Bold";
+    border: none;
+    color: white;
+    padding: 20px 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/*HISTORY HISTORY FOUNDER FOUNDER VISION VISION*/
+
+.founders-vision-history{
+    background-color: #f8f6f4;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 6%;
+}
+
+.founders-vision-history img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.founders-vision, .history{
+padding: 40px;
+}
+
+.history{
+    background-color: #f8f6f4;
+}
+
+.founders-vision-history p{
+    position: relative;
+    bottom: 20px;
+    font-size: 14px;
+    text-align: justify;
+
+}
+
+.founders-vision-history button{
+    background-color: #cd1112;
+    position: relative;
+    top: 10px;
+    font-family: "Arial";
+    font-weight: bold;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/*KEY INITIATIVES KEY INITIATIVES------------------------------------------------------------------------*/
+.Key-Initiatives h1{
+    font-size: 45px;
+    font-weight: normal;
+    font-family: "Canva Sans Bold";
+    text-align: center;
+}
+
+.Key-Initiatives p{
+    position: relative;
+    text-align: center;
+    bottom: 31px;
+}
+
+
+/*GRID=====================================================*/
+.fourplus1-grid{
+    margin: 5%;
+    display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "box-1 box-2 box-5"
+    "box-3 box-4 box-5"
+    ;
+}
+
+.fourplus1-grid .caption{   
+    padding: 23px;
+    bottom: 0;
+}
+
+
+.fourplus1-grid .item{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.fourplus1-grid > div{
+    min-width: 0;
+}
+
+.fourplus1-grid .image-container{
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.fourplus1-grid img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.fourplus1-grid .gradient{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.fourplus1-grid .caption{
+    padding: 23px;
+    align-items: end;
+    bottom:0px;
+}
+
+.fourplus1-grid h3{
+    margin: 0;
+    color: white;
+    font-weight: normal;
+    font-size: 30px;
+    font-family: "Canva Sans Bold";
+}
+
+.fourplus1-grid a{
+    color: white;
+    font-size: 14px;
+    font-weight: 100;
+}
+/*Grid style*/
+
+.fourplus1-grid .box1, .fourplus1-grid .box2, .fourplus1-grid .box3, .fourplus1-grid .box4, .fourplus1-grid .box5{
+    margin: 15px;
+    padding: 0px;
+}
+.fourplus1-grid .box1 .gradient{
+    background: linear-gradient(0deg, #6d3a05, transparent);
+}
+
+.fourplus1-grid .box2 .gradient{
+    background: linear-gradient(0deg, #405b0e, transparent);
+}
+
+.fourplus1-grid .box3 .gradient{
+    background: linear-gradient(0deg, #313949, transparent);
+}
+
+.fourplus1-grid .box4 .gradient{
+    background: linear-gradient(0deg, #0d2149, transparent);
+}
+
+.fourplus1-grid .box5 .gradient{
+    background: linear-gradient(0deg, rgb(94, 93, 93), transparent);
+}
+
+.fourplus1-grid .box1{
+    background: #6d3a05;
+}
+
+.fourplus1-grid .box2{
+    background: #405b0e;
+}
+
+.fourplus1-grid .box3{
+    background: #313949;
+}
+
+.fourplus1-grid .box4{
+    background: #0d2149;
+}
+
+.fourplus1-grid .box5{
+    background: rgb(94, 93, 93);
+}
+.fourplus1-grid .box5 .item{
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    overflow: hidden;
+}
+.fourplus1-grid .box5 .image-container{
+    position: relative;
+    width: 100%;
+    height: 800px;
+}
+.fourplus1-grid .box5 .caption{
+    padding: 23px;
+    position: relative;
+    bottom:0px;
+}
+/*LKSDCKSHFKSOASISHFKSJFHSDFSJFHSIDUSA*/
+
+section.advocacy{
+    position: relative;
+    bottom: 20px;
+    min-height: 500px;
+    padding: 0 4em 0 4em;
+}
+
+section.advocacy p{
+    position: relative;
+    bottom: 20px;
+}
+
+.advocacy div.container{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.advocacy div.container .parent{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.advocacy div.container .parent h3{
+    margin: 0;
+}
+
+.advocacy div.container .parent a{
+    color: #cd1112;
+}
+
+.advocacy div.container .parent img{
+    height: auto;
+    width: 70px;
+    margin: 2em;
+}
+
+/*FOOTERRRRRRRRRRR*/
+
+footer{
+    background-color: #091120;
+    display: grid;
+    color: white;
+    grid-template-columns: 200px 1fr;
+    padding: 30px;
+    
+}
+
+footer .contact-information img{
+    height: auto;
+    width: 20px;
+}
+
+footer img{
+    height: auto;
+    margin: 0;
+    width: 100px;
+    align-items: center;
+}
+
+footer h3{
+    margin: 0;
+    font-size:15px ;
+}
+
+footer a{
+    margin-right: 10px;
+}
+
+footer p{
+    font-size: 10px;
+}
