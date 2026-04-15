@@ -16,7 +16,7 @@
             <ul>
                 <li><a href="/pages/about-us.html">About Us</a></li>
                 <li><a href="">Maps</a></li>
-                <li><a href="">Products and Services</a></li>
+                <li><a href="/pages/products-services.html">Products and Services</a></li>
                 <li><a href="">FAQ</a></li>
                 <li><a href="/pages/contact-us.html">Contact Us</a></li>
                 <li><a class="register" href="">Register</a></li>
@@ -33,7 +33,7 @@
             <div class="text">
             <h6>Connecting Filipinos, Communities, and Sustainable Opportunities</h6>
             <h1>The <a class="underline">Cooperative Dream</a> for the next generation</h1>
-            <p>We would like to share a thought about the future—about the kind of future we hope to leave behind for the next generation. Every generation inherits a world shaped by those who came before them. And every generation has a responsibility to leave something better for those who will follow. When we look at the young people around us today—our children, our students, the youth in our communities—we see potential. <a class="link" href="">Read More...</a></p>
+            <p>We would like to share a thought about the future—about the kind of future we hope to leave behind for the next generation. Every generation inherits a world shaped by those who came before them. And every generation has a responsibility to leave something better for those who will follow. When we look at the young people around us today—our children, our students, the youth in our communities—we see potential. <a class="link" href="/pages/about-us/cooperative-dream.html">Read More...</a></p>
             <button>JOIN US</button>
             </div>
             <div class="bg">
@@ -55,7 +55,7 @@
                 </div>
 
                 <p>A message from UFMCOOP Founder Dr. Danilo J. Carandang. Throughout my years in banking, education, and community leadership, I have witnessed both the potential and the struggles of many Filipino families. I have seen hardworking people striving to improve their lives but often lacking access to the opportunities, systems, and support that would allow them to move forward with dignity and stability.</p>
-                <button>Read more</button>
+                <button><a href="pages/about-us/founders-vision.html">Read more</a></button>
             </div>
             
             <div class="img1">
@@ -73,7 +73,7 @@
                 </div>
                 
                 <p>For many years, I had the privilege of working in the banking industry. In that role, I saw how businesses grow, how investments are made, and how financial systems operate. I witnessed the power of capital and the importance of institutions in shaping economic progress.</p>
-                <button>Read more</button>
+                <button><a href="../pages/about-us/history.html">Read more</a></button>
             </div>
 
 
@@ -99,7 +99,7 @@
                     
                     <div class="caption">
                         <h3>Sustainable Agro-Forestry Development</h3>
-                        <a href="">Read More</a>
+                        <a href="pages/about-us/strategic-development-platform.html">Read More</a>
                     </div>
                 </div>
 
@@ -113,7 +113,7 @@
 
                     <div class="caption">
                         <h3>Farm Tourism and Eco-Development</h3>
-                        <a href="">Read More</a>
+                        <a href="pages/about-us/strategic-development-platform.html">Read More</a>
                     </div>
                 </div>
 
@@ -127,7 +127,7 @@
                     
                     <div class="caption">
                         <h3>Community Enterprise and Livelihood Programs</h3>
-                        <a href="">Read More</a>
+                        <a href="pages/about-us/strategic-development-platform.html">Read More</a>
                     </div>
                 </div>
 
@@ -141,7 +141,7 @@
                     
                     <div class="caption">
                         <h3>Digital Cooperative Platform</h3>
-                        <a href="">Read More</a>
+                        <a href="pages/about-us/strategic-development-platform.html">Read More</a>
                     </div>
                 </div> 
 
@@ -154,7 +154,7 @@
                     </div>    
                     <div class="caption">
                         <h3>Cooperative Hub Network</h3>
-                        <a href="">Read More</a>
+                        <a href="pages/about-us/strategic-development-platform.html">Read More</a>
                     </div>
                 </div>            
 
@@ -198,7 +198,7 @@
 
     <footer>
         <div class="column 1">
-            <img src="images/mainlogo.png">
+            <img src="images/mainlogo-dark.png">
             <p>Pleasant Village 25 Intercon Road<br>Alabang Muntinlupa City<br>Philippines</p>
         </div>
         
@@ -210,6 +210,45 @@
         </div>
     </footer>
 
+<style>
+.fade-text {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: all 1s ease;
+}
+.fade-text.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+</style>
+
+<script>
+const textEls = document.querySelectorAll(
+  '.founders-vision-history h1, \
+   .founders-vision-history p, \
+   .history h1, \
+   .history p, \
+   .advocacy h1, \
+   .advocacy p, \
+   .advocacy h3, \
+   .advocacy a, \
+   .Key-Initiatives h3, \
+   .Key-Initiatives a, \
+   .Key-Initiatives h1, \
+   .Key-Initiatives p '
+);
+
+textEls.forEach(el => el.classList.add('fade-text'));
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('show');
+  });
+});
+
+textEls.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
