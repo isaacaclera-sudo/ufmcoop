@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - UFM</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <link rel="icon" href="images/UFM_logo-removebg-preview.png">
+</head>
+<body>    
+    <header>
+        <nav>
+            <div class="brand">
+                <a href="../index.html"><img src="../images/mainlogo.png"></a>
+            </div>
+            <button class="menu-toggle">☰</button> 
+            <ul class="nav-links">
+                <li><a href="../pages/about-us.html">About Us</a></li>
+                <li><a href="">Maps</a></li>
+                <li><a href="../pages/products-services.html">Products and Services</a></li>
+                <li><a href="../pages/about-us/faq.html">FAQ</a></li>
+                <li><a href="../pages/contact-us.html">Contact Us</a></li>
+                <li><a class="register" href="">Register</a></li>
+                <li><a class="log-in" href="">Log In</a></li>
+            </ul>
+        </nav>
+    </header>
+            <script>
+                const toggle = document.querySelector('.menu-toggle');
+                const navLinks = document.querySelector('.nav-links');
+
+                toggle.onclick = () => {
+                navLinks.classList.toggle('active');
+                };
+            </script>
+
+    <section class="page">
+        <h2>Contact Us ></h2>
+        <div class="header">
+            <div class="head">
+                <div class="line"></div>
+                <h1>Contact Us</h1>
+            </div>
+        </div>
+        <article class="contact">
+            <div class="contact-form">
+                    <div class="form-1" style="grid-area: box-1">
+                        <label for="fname">First Name</label>
+                            <input type="text" id="fname" name="firstname" placeholder="Your First name..">
+                            </div>
+                    <div class="form-2" style="grid-area: box-2">
+                        <label for="lname">Last Name</label>
+                            <input type="text" id="lname" name="lastname" placeholder="Your Last name..">   
+                            </div>
+                    <div class="form-3" style="grid-area: box-3">
+                        <label for="phonenum">Phone Number</label>
+                            <input type="text" id="phonenum" name="phonenumber" placeholder="Your Phone Number..">
+                            </div>
+                    <div class="form-4" style="grid-area: box-4">
+                        <label for="email">E-mail</label>
+                            <input type="text" id="email" name="phonenumber" placeholder="Your E-mail..">
+                            </div>
+                    <div class="form-5" style="grid-area: box-5">
+                        <label for="mssg">Your Message</label>
+                            <textarea class="message" id="mssg" placeholder="Your Message.."></textarea>        
+                            </div>
+                    <button style="grid-area: box-6;">Submit</button>
+            </div>
+
+            <img src="../images/contact.png">
+        </article>
+    </section>
+
+    <section class="invitation">
+        <img src="../images/invitation.png">
+        <div class="parent">
+            <div class="container">
+                <div class="header">
+                    <div class="head">
+                        <div class="line"></div>
+                        <h1>Invitation for Membership</h1>
+                    </div>
+                </div>
+                    <p>Thank you for giving us the opportunity to share about UFM Coop and invite you to become a member to us!</p>
+                <button><a href="../pages/contact-us/invitation.html">Read More</a></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="join-us">
+        <p>Are you interested in becoming a member?</p>
+        <button>JOIN US</button>
+    </section>
+
+    <footer>
+    <div class="column 1">
+        <img src="../images/mainlogo-dark.png">
+        <p>Pleasant Village 25 Intercon Road<br>Alabang Muntinlupa City<br>Philippines</p>
+    </div>
+    
+    <div class="contact-information">
+        <h3>About Us</h3>
+        <p>+63 961 4245223</p>        
+        <a href="https://www.youtube.com/watch?v=hBYiFKSCXXI" target="_blank"><img src="../images/facebook-app-round-white-icon.webp"></a>
+        <a href=""><img src="../images/Gmail_Logo_White_512px.png" alt="Contact Us"></a>
+    </div>
+
+
+    </footer>
+
+
+</body>
+</html>

@@ -42,7 +42,7 @@ h1{
 /*NAVIGATION NAVIGATION NAVIGATION NAVIGATION*/
 /*blue=#0d55e4 red=#cd1112 lighter red=#cd1112*/
 header{
-    min-height: 100px;
+    min-height: 95px;
 }
 nav{
     min-width: 100%;
@@ -108,41 +108,83 @@ li a.log-in{
     border-color: black;
 }
 
-/*HERO HERO HERO HERO*/
-.hero{
-    color: white;
+.menu-toggle {
+    position: relative;
+    right: 30px;
+    border: none;
+    background: none;
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: auto;
 }
 
+@media (max-width: 910px) {
+    header{
+        min-height: 100px;
+    }
+        nav {
+    flex-wrap: wrap;
+    margin: auto;
+  }
+
+    .menu-toggle {
+    display: block;
+  }
+
+    nav ul {
+    padding-right: 70px;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    margin: 0;
+  }
+
+    nav ul.active {
+    max-height: 500px; /* enough to show items */
+  }
+
+    nav li {
+    width: 100%;
+  }
+
+    nav a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+  }
+
+    li a.register{
+    color: white;
+    width: 100%;
+    padding: 10px;
+    margin: 4px;
+    background-color: #980f10;
+    border-width: 1px;
+    border-color: #980f10;
+}
+    li a.log-in{
+    padding: 10px;
+    border-style: solid;
+    border-width:1px;
+    border-color: black;
+}
+
+}
+/*HERO HERO HERO HERO*/
 .hero .text{
     padding: 70px;
     padding-top: 80px;
-    margin-right: 144px;
-    margin-bottom: 40px;
-}
-.hero .bg{
-    max-height: 10%;
-    max-width: auto;
-}
-.hero .rectangle{
-    top: 0;
-    position: absolute;
-    background-color: #0b2e74;
-    height: 1111px;
-    width: 100%;
-    z-index: -99;
-    opacity: 0.5;
+    margin: 0 144px 40px 0;
 }
 
-.hero .backdrop img{
-    margin: 0;
-    padding: 0;
-    top:0;
-    height:1100px;
-    filter: contrast(80%),saturate(200%);
-    filter: brightness(40%);
-    position: absolute;
-    opacity: 100;
-    z-index: -100;
+
+.hero .backdrop{
+    width: 100%;
+    overflow: hidden;
 }
 
 .hero h6{
@@ -160,7 +202,7 @@ li a.log-in{
     font-family: "Canva Sans Bold";
     margin: 0;
     padding: 0;
-      text-decoration: underline solid #cd1112 3.5px;
+    text-decoration: underline solid #cd1112 3.5px;
 }
 
 .hero h1{
@@ -193,6 +235,70 @@ li a.log-in{
     cursor: pointer;
 }
 
+.hero {
+  position: relative;
+  height: 550px;
+  color: white;
+  overflow: hidden;
+}
+
+.hero .bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero .backdrop img {
+    position:relative;
+    min-width: 100%;
+    right: 100px;
+    filter: contrast(80%),saturate(200%);
+    filter: brightness(40%);
+    height: 100%;
+}
+
+.hero .rectangle {
+  position: absolute;
+  inset: 0;
+  background-color: #0b2e74;
+  opacity: 0.5;
+}
+
+.hero .text {
+  position: relative;
+  z-index: 1;
+}
+
+@media(max-width:955px){
+.hero .text{
+    padding: 30px;
+    margin: 30px 0 0 0;
+}
+
+.hero h6{
+    display: none;
+}
+
+.hero p, a.link{
+    margin-top: 30px;
+    font-size: 12px;
+    color: #f8f6f4;
+}
+
+.hero h1, .hero a.underline{
+    font-size: 36px;
+}
+.hero{
+    height: 400px;
+}
+
+}
+@media(max-width:460px){
+.hero{
+  height: 500px;
+
+}
+}
 /*HISTORY HISTORY FOUNDER FOUNDER VISION VISION*/
 
 .founders-vision-history{
@@ -240,6 +346,33 @@ padding: 40px;
     font-size: 14px;
     cursor: pointer;
 }
+
+@media(max-width:666px){
+    .founders-vision-history{
+    background-color: #f8f6f4;
+    display: block;
+}
+.founders-vision-history img{
+    display: none;
+}
+.founders-vision-history h1{
+    font-size: 28px;
+}
+
+.founders-vision-history p{
+    position: relative;
+    bottom: 20px;
+    font-size: 14px;
+    text-align: justify;
+
+}
+
+.founders-vision-history .line{
+    height: 35px;
+
+}
+}
+
 
 /*KEY INITIATIVES KEY INITIATIVES------------------------------------------------------------------------*/
 .Key-Initiatives h1{
@@ -294,7 +427,7 @@ padding: 40px;
 }
 
 .fourplus1-grid{
-    margin: 5%;
+    margin: 3em;
     display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto;
@@ -425,6 +558,27 @@ padding: 40px;
     position: relative;
     bottom:0px;
 }
+
+
+@media(max-width:880px){
+    .Key-Initiatives p{
+        display: none;
+    }
+    .fourplus1-grid {
+    display: block;
+  }
+
+  .fourplus1-grid > div {
+    position: relative; 
+  }
+
+  .fourplus1-grid .box5 .item,
+  .fourplus1-grid .box5 .image-container {
+    height: 250px;
+  }
+
+  
+}
 /*LKSDCKSHFKSOASISHFKSJFHSDFSJFHSIDUSA*/
 
 section.advocacy{
@@ -462,6 +616,48 @@ section.advocacy p{
     height: auto;
     width: 70px;
     margin: 2em;
+}
+
+.founders-vision-history h1{
+    font-size: 28px;
+}
+
+.founders-vision-history p{
+    position: relative;
+    bottom: 20px;
+    font-size: 14px;
+    text-align: justify;
+
+}
+
+@media(max-width:775px){
+    section.advocacy p{
+    font-size: 14px;
+    position: relative;
+    bottom: 20px;
+    }
+
+    section.advocacy h1{
+    font-size: 28px;
+    }
+
+    section.advocacy .line{
+        height: 30px;
+    }
+
+    .advocacy div.container .parent img{
+    height: auto;
+    width: 50px;
+    margin:1em;
+}
+
+    section.advocacy h3, section.advocacy a{
+    font-size: 12px;
+    }
+
+    section.advocacy{
+    min-height: 250px;
+}
 }
 
 /*FOOTERRRRRRRRRRR*/
@@ -565,7 +761,7 @@ article.vision p{
 }
 
 .page h2{
-    margin: 20px auto 20px 50px;
+    margin: 40px auto 20px 50px;
 }
 
 article.mission .head{
@@ -614,6 +810,33 @@ article.mission p.bold{
     height: auto;
     width: 55%;
     object-fit: cover;
+}
+
+@media(max-width:755px){
+section.page .header p{
+    width: 100%;
+}
+}
+
+@media(max-width:460px){
+section.page img{
+    height: 0%;
+    width: 0%;
+}
+article.vision .text{
+    width: 100%;
+    padding: 50px;
+}
+
+article.mission .mission-text ul{
+    position: relative;
+    bottom: 20px;
+    width: 100%;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    padding: 50px;
+}
 }
 
 /*CORECORECOREVALUESCORECORECOREVALUESCORECORECOREVALUESCORECORECOREVALUESCORECORECOREVALUES*/
@@ -668,6 +891,14 @@ article.mission p.bold{
     padding: 20px;
 }
 
+
+@media(max-width:530px){
+.core-values .grid{
+    margin: 0px 30px;
+    display: grid;
+    grid-template-columns: auto;
+}
+}
 /*BOARD OF DIRECTORS BOARD OF DIRECTORS BOARD OF DIRECTORS BOARD OF DIRECTORS*/
 .directors .grid{
     margin: 40px;
@@ -718,6 +949,74 @@ article.mission p.bold{
     font-size: 36px;
 }
 
+@media(max-width:990px){
+.directors{
+    min-height: 2500px;
+}
+.directors .grid{
+    margin: 40px;
+    gap: 3%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.directors .card{
+    border: 1px solid rgb(221, 221, 221);
+    height: 550px;
+    background-color: white;
+    width: 100%;
+    overflow: hidden;
+}
+
+.directors .card img{
+    height: 400px;
+    object-fit: cover;
+    width: 100%;
+}
+}
+
+@media(max-width:500px){
+.directors{
+    min-height: 1670px;
+}
+.directors h3{
+    padding: 10px 10px;
+    font-size: 14px;
+    margin: 0;
+}
+
+.directors h4{
+    font-size: 14px;
+    font-weight: normal;
+    padding: 0 10px;
+    margin: 0;
+}
+.directors a{
+    font-size: 14px;
+    color: #980f10;
+    padding: 0 10px;
+    margin: 0;
+}
+.directors .grid{
+    margin: 40px;
+    gap: 3%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.directors .card{
+    border: 1px solid rgb(221, 221, 221);
+    height: 340px;
+    background-color: white;
+    width: 100%;
+    overflow: hidden;
+}
+
+.directors .card img{
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+}
+
 /*PURPOSE STATEMENT PURPOSE STATEMENT PURPOSE STATEMENT PURPOSE STATEMENT PURPOSE STATEMENT PURPOSE STATEMENT PURPOSE STATEMENT PURPOSE STATEMENT PURPOSE STATEMENT PURPOSE STATEMENT */
 .purpose-statement{
     margin: 70px 0;
@@ -746,7 +1045,24 @@ article.mission p.bold{
     object-fit: cover;
 }
 
+@media(max-width:800px){
+    .purpose-statement img{
+        height: 0;
+        width: 0;
+    }
+    .purpose-statement .container{
+    padding: 40px;
+    width: 100%;
+    }
+    .purpose-statement .container p{
+    font-size: 16px;
+    text-align: justify;
+    }
+    .purpose-statement .container h1{
+    font-size: 28px;
+}
 
+}
 /*JOIN US JOIN US JOIN US JOIN US JOIN US JOIN US JOIN US JOIN US JOIN US JOIN US JOIN US JOIN US */
 section.join-us{
     margin: 30px 30px 60px 30px;
@@ -800,7 +1116,7 @@ article.contact .contact-form{
     "box-3 box-4"
     "box-5 box-5"
     "box-6 box-6"
-    ;
+    ;   
     width: 60%;
 }
 
@@ -850,6 +1166,24 @@ article.contact button{
     width: 160px;
     cursor: pointer;
 }
+
+@media(max-width:826px){
+article.contact{
+    width: auto;
+    height: 600px;
+    display: block;
+}
+
+article.contact img {
+    width: 0;
+    height: 0;
+}
+article.contact .contact-form{
+    padding: 20px;
+    width: auto;
+}
+}
+
 
 /*INVITATION INVITATION INVITATION INVITATION INVITATION INVITATION INVITATION INVITATION INVITATION INVITATION INVITATION INVITATION INVITATION INVITATION INVITATION INVITATION INVITATION INVITATION INVITATION INVITATION INVITATION INVITATION INVITATION INVITATION INVITATION INVITATION INVITATION INVITATION INVITATION INVITATION */
 
@@ -912,6 +1246,33 @@ button a{
 
 .page h3{
     margin-left: 4em;
+}
+
+
+@media(max-width:700px){
+    section.invitation .container{
+        width: auto;
+    }
+}
+
+@media(max-width:600px){
+    section.invitation .container{
+        width: auto;
+    }
+    section.invitation h1{
+        font-size: 20px;
+    }
+
+    section.invitation .line{
+        height: 24px;
+        width: 2px;
+    }
+
+    section.invitation p{
+    text-align: justify;
+    margin: 10px 0 0 0;
+}
+
 }
 /*PRODUCTS AND SERVICES AND PRODUCTS AND SERVICES AND PRODUCTS AND SERVICES AND PRODUCTS AND SERVICES AND PRODUCTS AND SERVICES AND PRODUCTS AND SERVICES AND PRODUCTS AND SERVICES AND PRODUCTS AND SERVICES AND PRODUCTS AND SERVICES AND PRODUCTS AND SERVICES AND PRODUCTS AND SERVICES AND PRODUCTS AND SERVICES AND PRODUCTS AND SERVICES AND PRODUCTS AND SERVICES AND PRODUCTS AND SERVICES AND PRODUCTS AND SERVICES AND PRODUCTS AND SERVICES AND PRODUCTS AND SERVICES AND PRODUCTS AND SERVICES AND PRODUCTS AND SERVICES AND PRODUCTS AND SERVICES AND PRODUCTS AND SERVICES AND PRODUCTS AND SERVICES AND PRODUCTS AND SERVICES AND PRODUCTS AND SERVICES AND PRODUCTS AND SERVICES AND PRODUCTS AND SERVICES AND PRODUCTS AND SERVICES AND PRODUCTS AND SERVICES AND PRODUCTS AND SERVICES*/
 .products{

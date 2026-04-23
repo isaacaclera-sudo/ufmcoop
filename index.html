@@ -13,7 +13,9 @@
             <div class="brand">
                 <a href="index.html"><img src="images/mainlogo.png"></a>
             </div>
-            <ul>
+            <button class="menu-toggle">☰</button>
+
+            <ul class="nav-links">
                 <li><a href="pages/about-us.html">About Us</a></li>
                 <li><a href="">Maps</a></li>
                 <li><a href="pages/products-services.html">Products and Services</a></li>
@@ -25,7 +27,14 @@
         </nav>
     </header>
 
+            <script>
+                const toggle = document.querySelector('.menu-toggle');
+                const navLinks = document.querySelector('.nav-links');
 
+                toggle.onclick = () => {
+                navLinks.classList.toggle('active');
+                };
+            </script>
 
 
 
@@ -42,6 +51,7 @@
             </div>
             
         </section>
+        
 
 
 
@@ -199,6 +209,7 @@
         <p>Are you interested in becoming a member?</p>
         <button>JOIN US</button>
     </section>
+
 
     <footer>
         <div class="column 1">
