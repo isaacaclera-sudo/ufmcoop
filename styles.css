@@ -129,7 +129,7 @@ li a.log-in{
   }
 
     .menu-toggle {
-    display: block;
+    display: block !important;
   }
 
     nav ul {
