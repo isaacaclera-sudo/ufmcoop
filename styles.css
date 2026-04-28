@@ -130,6 +130,7 @@ li a.log-in{
 
     .menu-toggle {
     display: block !important;
+	background: red;
   }
 
     nav ul {
